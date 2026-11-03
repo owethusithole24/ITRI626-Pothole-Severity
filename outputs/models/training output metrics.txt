@@ -1,0 +1,153 @@
+{
+  "seed": 42,
+  "img_size": 224,
+  "device": "cuda",
+  "model_cfgs": {
+    "SmallCNN": {
+      "timm_name": null,
+      "pretrained": false,
+      "lr": 0.001,
+      "epochs": 40,
+      "batch": 32,
+      "weight_decay": 0.0001
+    },
+    "EfficientNetV2-S": {
+      "timm_name": "tf_efficientnetv2_s",
+      "pretrained": true,
+      "lr": 0.0003,
+      "epochs": 20,
+      "batch": 32,
+      "weight_decay": 0.0001
+    },
+    "ViT-B/16": {
+      "timm_name": "vit_base_patch16_224",
+      "pretrained": true,
+      "lr": 0.0001,
+      "epochs": 20,
+      "batch": 32,
+      "weight_decay": 0.05
+    }
+  },
+  "class_weights": {
+    "minor_pothole": 1.4856,
+    "medium_pothole": 0.7558,
+    "major_pothole": 0.9961
+  },
+  "results": {
+    "SmallCNN": {
+      "accuracy": 0.7058823529411765,
+      "macro_f1": 0.7079115413053706,
+      "per_class": {
+        "minor_pothole": {
+          "precision": 0.5454545454545454,
+          "recall": 0.8571428571428571,
+          "f1": 0.6666666666666666
+        },
+        "medium_pothole": {
+          "precision": 0.7534246575342466,
+          "recall": 0.5612244897959183,
+          "f1": 0.6432748538011696
+        },
+        "major_pothole": {
+          "precision": 0.8309859154929577,
+          "recall": 0.7972972972972973,
+          "f1": 0.8137931034482758
+        }
+      },
+      "confusion_matrix": [
+        [
+          42,
+          7,
+          0
+        ],
+        [
+          31,
+          55,
+          12
+        ],
+        [
+          4,
+          11,
+          59
+        ]
+      ]
+    },
+    "EfficientNetV2-S": {
+      "accuracy": 0.7375565610859729,
+      "macro_f1": 0.722691198002101,
+      "per_class": {
+        "minor_pothole": {
+          "precision": 0.6363636363636364,
+          "recall": 0.5714285714285714,
+          "f1": 0.6021505376344086
+        },
+        "medium_pothole": {
+          "precision": 0.7070707070707071,
+          "recall": 0.7142857142857143,
+          "f1": 0.7106598984771574
+        },
+        "major_pothole": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8783783783783784,
+          "f1": 0.8552631578947368
+        }
+      },
+      "confusion_matrix": [
+        [
+          28,
+          21,
+          0
+        ],
+        [
+          15,
+          70,
+          13
+        ],
+        [
+          1,
+          8,
+          65
+        ]
+      ]
+    },
+    "ViT-B/16": {
+      "accuracy": 0.7692307692307693,
+      "macro_f1": 0.771027477949422,
+      "per_class": {
+        "minor_pothole": {
+          "precision": 0.7708333333333334,
+          "recall": 0.7551020408163265,
+          "f1": 0.7628865979381443
+        },
+        "medium_pothole": {
+          "precision": 0.74,
+          "recall": 0.7551020408163265,
+          "f1": 0.7474747474747475
+        },
+        "major_pothole": {
+          "precision": 0.8082191780821918,
+          "recall": 0.7972972972972973,
+          "f1": 0.8027210884353742
+        }
+      },
+      "confusion_matrix": [
+        [
+          37,
+          12,
+          0
+        ],
+        [
+          10,
+          74,
+          14
+        ],
+        [
+          1,
+          14,
+          59
+        ]
+      ]
+    }
+  },
+  "best_model": "ViT-B/16"
+}

@@ -1,0 +1,39 @@
+{
+  "seed": 42,
+  "img_size": 224,
+  "pad_frac": 0.1,
+  "min_box_px": 16,
+  "phash_size": 16,
+  "phash_maxhamming": 8,
+  "split_fracs": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "n_source_images": 713,
+  "n_duplicate_groups": 697,
+  "n_patches": 1479,
+  "class_counts": {
+    "minor_pothole": 331,
+    "medium_pothole": 652,
+    "major_pothole": 496
+  },
+  "per_split": {
+    "train": {
+      "minor_pothole": 232,
+      "medium_pothole": 456,
+      "major_pothole": 347
+    },
+    "val": {
+      "minor_pothole": 50,
+      "medium_pothole": 98,
+      "major_pothole": 75
+    },
+    "test": {
+      "minor_pothole": 49,
+      "medium_pothole": 98,
+      "major_pothole": 74
+    }
+  },
+  "dataset_source": "Kaggle: idanbaru/annotated-potholes-with-severity-levels"
+}

@@ -1,0 +1,4 @@
+model,accuracy,macro_F1,F1_minor,F1_medium,F1_major
+ViT-B/16,0.7692,0.771,0.7629,0.7475,0.8027
+EfficientNetV2-S,0.7376,0.7227,0.6022,0.7107,0.8553
+SmallCNN,0.7059,0.7079,0.6667,0.6433,0.8138

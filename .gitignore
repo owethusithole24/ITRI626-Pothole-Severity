@@ -1,0 +1,11 @@
+# Dataset: not redistributed (licence) - download from Kaggle, see README
+archive/
+patches_dataset/
+# Large model weights (GitHub rejects files over 100 MB)
+*.pt
+# Mac / Jupyter clutter
+.DS_Store
+.ipynb_checkpoints/
+.jupyter/
+# Module brief (lecturer's document)
+ITRI626_Project_New.pdf
